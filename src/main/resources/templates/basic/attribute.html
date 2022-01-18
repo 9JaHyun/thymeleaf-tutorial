@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<h1>속성 설정</h1>
+<!-- name="userA"로 치환 -->
+<input type="text" name="mock" th:name="userA" />
+
+<h1>속성 추가</h1>
+<!-- attrappend : 같은 attribute name 뒤에 붙인다. -->
+- th:attrappend = <input type="text" class="text" th:attrappend="class='large'" /><br/>
+<!-- attrprepend : 같은 attribute name 앞에 붙인다. -->
+- th:attrprepend = <input type="text" class="text" th:attrprepend="class='large'" /><br/>
+<!-- classappend : class 속성에 추가해준다. -->
+- th:classappend = <input type="text" class="text" th:classappend="large" /><br/>
+
+<h1>checked 처리</h1>
+<!-- html의 경우 checked를 사용하면 무조건적으로 체크가 된다. 이는 후에 굉장히 불편함을 초래한다. 그래서 true false를 부여할 수 있는 th:checked를 많이 사용한다.-->
+- checked o <input type="checkbox" name="active" th:checked="true" /><br/>
+- checked x <input type="checkbox" name="active" th:checked="false" /><br/>
+- checked=false <input type="checkbox" name="active" checked="false" /><br/>
+</body>
+</html>

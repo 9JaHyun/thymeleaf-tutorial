@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- 페이지마다 다르게 변경하고 싶은 경우 base layout의 태그를 의도에 맞게 변경할 수 있다.-->
+<!-- ~{::tagName} - replace or insert 시 이 html이 가지고 있던 tag로 대체를 시켜 줌-->
+<head th:replace="template/layout/base :: common_header(~{::title},~{::link})">
+  <title>메인 타이틀</title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  <link rel="stylesheet" th:href="@{/themes/smoothness/jquery-ui.css}">
+</head>
+<body>
+메인 컨텐츠
+</body>
+</html>
